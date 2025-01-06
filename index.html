@@ -6,6 +6,32 @@
     <title>Survey Form</title>
 </head>
 <body>
-    
+    <h1 id="title">Formulario de inscripción</h1>
+    <p id="description">Completa el formulario con tu información para poderte inscribir en el torneo de dominó del club <em>Los Capaces</em></p>
+
+    <form action="" id="survey-form">
+        <label for="name" id="name-label" >Nombre: </label>
+        <input id="name" type="text" placeholder="Ingrese su nombre." required>
+        <label for="email" id="email-label" >Email: </label>
+        <input id="email" type="email" placeholder="Ingrese su correo electronico" required>
+        <label for="number" id="number-label" >Edad: </label>
+        <input id="number" type="number" min="12" max="120" placeholder="Ingrese su edad" required>
+        <input type="text">
+
+        <select name="turno" id="dropdown">
+            <option value="matutino">Matutino</option>
+            <option value="vespertino">Vespertino</option>
+        </select>
+
+        <input type="radio" name="modalidad" id="masculino" value="masculino">
+        <input type="radio" name="modalidad" id="femenino" value="femenino">
+
+        <input type="checkbox" name="tipo-de-inscripcion" id="" value="sin refrigerio">
+        <input type="checkbox" name="tipo-de-inscripcion" id="" value="con refrigerio">
+
+        <textarea name="" id=""></textarea>
+
+        <input id="submit" type="submit" value="">
+    </form>
 </body>
 </html>
