@@ -1,0 +1,67 @@
+@layer reset, form_style;
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: antiquewhite;
+    font-size: 20px;
+}
+
+@layer reset {
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+  
+    body {
+      margin: unset;
+    }
+  
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+  
+    img,
+    picture,
+    svg,
+    canvas {
+      display: block;
+      max-inline-size: 100%;
+      block-size: auto;
+    }
+  
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  }
+
+  @layer form_style {
+    body{
+        width: 1200px;
+        height: 100vh;        margin: 0 auto;
+        background-image: linear-gradient(rgba(13, 13, 55, 0.781),rgba(13, 13, 55, 0.781)),
+                  url("../assets/domino-2747758_1920.jpg");
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: stretch;
+        justify-content: space-evenly;
+        background-color: rgba(58, 58, 176, 0.686);
+        border-radius: 10px;
+        padding: 0 5rem;
+        margin: 2rem 0;
+    }
+  }
