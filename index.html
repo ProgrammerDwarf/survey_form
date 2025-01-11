@@ -7,32 +7,77 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <h1 id="title">Formulario de inscripción</h1>
-    <p id="description">Completa el formulario con tu información para poderte inscribir en el torneo de dominó del club <em>Los Capaces</em></p>
+    <div class="wrapper">
+        <header class="header">
+            <h1 id="title" class="text-center">Formulario de inscripción</h1>
+            <p id="description" class="text-center">
+                Completa el formulario con tu información para inscribirte en el torneo de dominó del club <em>Los Capaces</em>.
+            </p>
+        </header>
+        <form action="/submit-form" method="post" id="survey-form">
+            <!-- Campo para el nombre -->
+            <div>
+                <label for="name" id="name-label">Nombre:</label>
+                <input id="name" name="name" type="text" placeholder="Ingrese su nombre." required>
+            </div>
 
-    <form action="" id="survey-form">
-        <label for="name" id="name-label" >Nombre: </label>
-        <input id="name" type="text" placeholder="Ingrese su nombre." required>
-        <label for="email" id="email-label" >Email: </label>
-        <input id="email" type="email" placeholder="Ingrese su correo electronico" required>
-        <label for="number" id="number-label" >Edad: </label>
-        <input id="number" type="number" min="12" max="120" placeholder="Ingrese su edad" required>
-        <input type="text">
+            <!-- Campo para el email -->
+            <div>
+                <label for="email" id="email-label">Email:</label>
+                <input id="email" name="email" type="email" placeholder="Ingrese su correo electrónico" required>
+            </div>
 
-        <select name="turno" id="dropdown">
-            <option value="matutino">Matutino</option>
-            <option value="vespertino">Vespertino</option>
-        </select>
+            <!-- Campo para la edad -->
+            <div>
+                <label for="number" id="number-label">Edad:</label>
+                <input id="number" name="age" type="number" min="12" max="120" placeholder="Ingrese su edad" required>
+            </div>
 
-        <input type="radio" name="modalidad" id="masculino" value="masculino">
-        <input type="radio" name="modalidad" id="femenino" value="femenino">
+            <!-- Selección de turno -->
+            <div>
+                <label for="dropdown">Turno al que va a asistir:</label>
+                <select name="turno" id="dropdown" required>
+                    <option value="" disabled selected>Seleccione un turno</option>
+                    <option value="matutino">Matutino</option>
+                    <option value="vespertino">Vespertino</option>
+                </select>
+            </div>
 
-        <input type="checkbox" name="tipo-de-inscripcion" id="" value="sin refrigerio">
-        <input type="checkbox" name="tipo-de-inscripcion" id="" value="con refrigerio">
+            <!-- Modalidad -->
+            <fieldset>
+                <legend>Seleccione la modalidad:</legend>
+                <div>
+                    <input type="radio" name="modalidad" id="masculino" value="masculino">
+                    <label for="masculino">Masculino</label>
+                </div>
+                <div>
+                    <input type="radio" name="modalidad" id="femenino" value="femenino">
+                    <label for="femenino">Femenino</label>
+                </div>
+            </fieldset>
 
-        <textarea name="" id=""></textarea>
+            <!-- Tipo de inscripción -->
+            <fieldset>
+                <legend>Inscripción con refrigerio o libre:</legend>
+                <div>
+                    <input type="checkbox" name="tipo-de-inscripcion" id="con-refrigerio" value="refrigerio">
+                    <label for="con-refrigerio">Con refrigerio</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="tipo-de-inscripcion" id="sin-refrigerio" value="libre">
+                    <label for="sin-refrigerio">Sin refrigerio</label>
+                </div>
+            </fieldset>
 
-        <input id="submit" type="submit" value="">
-    </form>
+            <!-- Campo para comentarios -->
+            <div>
+                <label for="suggestions">Comentarios o sugerencias adicionales:</label>
+                <textarea id="suggestions" name="suggestions" placeholder="Escriba aquí sus comentarios..." rows="4" cols="50"></textarea>
+            </div>
+
+            <!-- Botón de envío -->
+            <button id="submit" type="submit">Enviar formulario</button>
+        </form>
+    </div>
 </body>
 </html>
